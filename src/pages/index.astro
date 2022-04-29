@@ -1,13 +1,164 @@
----
-
----
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>Welcome!</title>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="py-8 bg-gray-200">
+
+			<nav class="flex justify-center pb-10 space-x-10">
+				<a href="/" class="font-bold text-gray-800 hover:text-gray-900">Home</a>
+				<a href="/pricing" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+				<a href="/blog" class="font-medium text-gray-500 hover:text-gray-900">Blog</a>				
+				<a href="/login" class="font-medium text-gray-500 hover:text-gray-900">Login</a>
+				<a href="/signup" class="font-medium text-white hover:bg-blue-600 bg-blue-500 px-3 py-2 -mt-2 rounded-lg">Sign up</a>
+			</nav>
+
+      <h1 class="text-center text-3xl mb-10 font-extrabold tracking-tight text-gray-900">
+        Use this great tool
+			</h1>
+      <p class="text-center text-gray-700">Tagline that describes the tool</p>
+      <button class="block text-white bg-green-500 px-5 py-3 mx-auto mt-10 font-bold rounded-lg">Sign up now</button>
+
+			<div class="mt-20 mx-auto text-center max-w-3xl px-10">
+				<p class="mt-2 text-2xl font-extrabold text-gray-900 tracking-tight">
+					Everything you need to know about this app
+				</p>
+				<p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+					A great list of things it allows you to do
+				</p>
+
+				<div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
+					<div class="bg-gray-50 rounded-lg px-6 pb-8">
+						<h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">First benefit</h3>
+						<p class="mt-5 text-gray-500">
+							You can save time
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-lg px-6 pb-8">
+						<h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Second benefit</h3>
+						<p class="mt-5 text-gray-500">
+							You can save money
+						</p>
+					</div>
+					<div class="bg-gray-50 rounded-lg px-6 pb-8">
+						<h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">3rd benefit</h3>
+						<p class="mt-5 text-gray-500">
+							You can avoid X
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-lg px-6 pb-8">
+						<h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">4th benefit</h3>
+						<p class="mt-5 text-gray-500">
+							You can do Y
+						</p>
+					</div>			
+				</div>
+			</div>
+
+			<footer class="mt-20 pt-12 border-t-2 border-gray-300">
+				<nav class="flex justify-center pb-10 space-x-10">
+					<a href="/" class="font-medium text-gray-500 hover:text-gray-900">Home</a>
+          <a href="/pricing" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+					<a href="/blog" class="font-medium text-gray-500 hover:text-gray-900">Blog</a>				
+        </nav>
+				<p class="text-center text-gray-400">
+					&copy; 2021 Great Tool. All rights reserved.
+				</p>
+			</footer>
+
+    </div>
 	</body>
-</html>
+</html> 
+ 84  
+src/pages/pricing.astro
+@@ -0,0 +1,84 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Welcome!</title>
+	</head>
+
+	<body class="bg-gray-200">
+    <div class="py-8">
+
+			<nav class="flex justify-center space-x-10 pb-10">
+				<a href="/" class="font-medium text-gray-500 hover:text-gray-900">Home</a>
+	            <a href="/pricing" class="font-bold text-gray-800 hover:text-gray-900">Pricing</a>
+				<a href="/blog" class="font-medium text-gray-500 hover:text-gray-900">Blog</a>
+				<a href="/login" class="font-medium text-gray-500 hover:text-gray-900">Login</a>
+				<a href="/signup" class="font-medium text-white hover:bg-blue-600 bg-blue-500 px-3 py-2 -mt-2 rounded-lg">Sign up</a>
+			</nav>
+
+      <h1 class="mt-10 text-center text-3xl mb-10 font-extrabold tracking-tight text-gray-900">
+        Pricing plans
+			</h1>
+
+			<div class="mt-20 mx-auto text-center max-w-3xl px-10">
+
+               <div class="space-y-12 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8">
+                	<div class="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col">
+                		<h3 class="text-3xl font-semibold text-gray-900">Basic</h3>
+
+                		<p class="mt-4 mx-auto">
+                			<span class="text-5xl font-extrabold tracking-tight">$29</span>
+                			<span class="ml-1 text-xl font-semibold">/month</span>
+                		</p>
+                		<p class="mt-6 text-gray-500">The essentials</p>
+
+                		<ul role="list" class="mt-6 space-y-6">
+                			<li class="flex">
+                				<span class="-mt-2 text-blue-500 text-3xl">&check;</span>
+                				<span class="ml-3 text-gray-500 text-left">Access to our service</span>
+                			</li>
+
+                			<li class="flex">
+                				<span class="-mt-2 text-blue-500 text-3xl">&check;</span>
+                				<span class="ml-3 text-gray-500 text-left">Support</span>
+                			</li>
+                		</ul>
+                	</div>
+
+                	<div class="p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col">
+                		<h3 class="text-3xl font-semibold text-gray-900">Pro</h3>
+
+                		<p class="mt-4 mx-auto">
+                			<span class="text-5xl font-extrabold tracking-tight">$99</span>
+                			<span class="ml-1 text-xl font-semibold">/month</span>
+                		</p>
+                		<p class="mt-6 text-gray-500">Much more features</p>
+
+                		<ul role="list" class="mt-6 space-y-6">
+                			<li class="flex">
+                				<span class="-mt-2 text-blue-500 text-3xl">&check;</span>
+                				<span class="ml-3 text-gray-500">Access to our service</span>
+                			</li>
+
+                			<li class="flex">
+                				<span class="-mt-2 text-blue-500 text-3xl">&check;</span>
+                				<span class="ml-3 text-gray-500 text-left">Support</span>
+                			</li>
+
+                			<li class="flex">
+                				<span class="-mt-2 text-blue-500 text-3xl">&check;</span>
+                				<span class="ml-3 text-gray-500 text-left">More features</span>
+                			</li>
+                		</ul>
+                	</div>
+                </div>	
+
+               <a href="#"
+            	class="bg-blue-500 text-white hover:bg-blue-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Sign
+            	up</a>
+
+			</div>
+		</div>
+	</body>
+</html> 
